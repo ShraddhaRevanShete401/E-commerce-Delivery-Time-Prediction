@@ -497,7 +497,8 @@ li[aria-selected="true"] {
 /* ============================================================
    PRIMARY BUTTON — aurora gradient + glow pulse
    ============================================================ */
-button[kind="primary"] {
+div[data-testid="stFormSubmitButton"] button,
+button[kind="secondaryFormSubmit"] {
     margin-top: 16px !important;
     padding: 15px 28px !important;
     font-size: 1.02rem !important;
@@ -527,7 +528,8 @@ button[kind="primary"] {
     position: relative;
     overflow: hidden;
 }
-button[kind="primary"]::before {
+div[data-testid="stFormSubmitButton"] button::before,
+button[kind="secondaryFormSubmit"]::before {
     content: "";
     position: absolute;
     top: 0; left: -100%;
@@ -540,10 +542,12 @@ button[kind="primary"]::before {
     );
     transition: left 0.7s ease;
 }
-button[kind="primary"]:hover::before {
+div[data-testid="stFormSubmitButton"] button:hover::before,
+button[kind="secondaryFormSubmit"]:hover::before {
     left: 100%;
 }
-button[kind="primary"]:hover {
+div[data-testid="stFormSubmitButton"] button:hover,
+button[kind="secondaryFormSubmit"]:hover {
     transform: translateY(-4px) scale(1.025) !important;
     background-position: 100% 0% !important;
     box-shadow:
@@ -552,7 +556,8 @@ button[kind="primary"]:hover {
         0 0 0 1px rgba(255,255,255,0.50) inset,
         0 1px 0 rgba(255,255,255,0.75) inset !important;
 }
-button[kind="primary"]:active {
+div[data-testid="stFormSubmitButton"] button:active,
+button[kind="secondaryFormSubmit"]:active {
     transform: translateY(-1px) scale(0.995) !important;
 }
 @keyframes auroraBtn {
