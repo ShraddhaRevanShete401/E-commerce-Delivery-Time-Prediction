@@ -27,7 +27,7 @@ st.set_page_config(
 # Helpers
 # ---------------------------------------------------------------------------
 def md(html: str) -> None:
-    """Render HTML via st.markdown with dedent to avoid 4-space Markdown
+    """Render HTML via a st.markdown with dedent to avoid 4-space Markdown
     code-block rendering."""
     st.markdown(textwrap.dedent(html), unsafe_allow_html=True)
 
